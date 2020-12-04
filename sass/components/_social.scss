@@ -1,0 +1,69 @@
+/* social list ----------------------*/
+.social-list {
+    display: flex;
+    height: 44px;
+    width: 270px;
+    margin-bottom: 27px;
+    justify-content: center;
+}
+.social-item:not(:last-child) {
+    margin-right: 10px;
+}
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: $white-color;
+    border-radius: 50%;
+    color: $icon-color;
+    transition: color var(--transition), background-color var(--transition),
+        border-radius var(--transition);
+}
+.social-link:hover,
+.social-link:focus {
+    color: $white-color;
+    background-color: $accent-color;
+    border-radius: 50%;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+/*sign-up Подпишись на рассылку */
+.social-list-footer {
+    display: flex;
+    height: 44px;
+    width: 270px;
+    justify-content: left;
+}
+.social-item-footer:not(:last-child) {
+    margin-right: 10px;
+}
+.social-item-footer {
+    display: block;
+    /* width: 44px;
+    height: 44px;
+    color: $icon-color;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1); */
+}
+.social-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color var(--transition);
+}
+.social-link-footer:hover,
+.social-link-footer:focus {
+    background-color: $accent-color;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+.social-icon-footer {
+    fill:$white-color;
+}

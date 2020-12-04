@@ -1,0 +1,46 @@
+.background-feature {
+    width: 270px;
+    height: 120px;
+    background-color: $background-item;
+    border-radius: 4px;
+}
+.icon-antenna {
+    margin: 25px 102.34px;
+    height: 70px;
+}
+.icon-other {
+    width: 70px;
+    margin: 25px 100px;
+}
+/*.section .descriptio <p> текст блока*/
+.section .wehight {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.feature-item {
+    width: calc((100%-90px)/4);
+    margin-right: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--p-text-color);
+    font-weight: normal;
+    font-style: normal;
+}
+.feature-item:last-child {
+    margin-right: 0px;
+}
+.feature-list>.item {
+    width: 270px;
+    /*background-color: peru;*/
+    /*margin-top: 94px;
+    margin-bottom: 94px;*/
+}

@@ -1,0 +1,11 @@
+/* Шапка сайта */
+.page-header {
+    display: flex;
+    border: 1px solid #ececec;
+}
+/* contacts menu in top  */
+.headerbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб студия</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+</head>
+
+<body>
+    <!--Шапка сайта-->
+    <header class="page-header">
+        <div class="container headerbox">
+            <!--Навигация-->
+            <nav class="navigation">
+                <a href="./index.html" class="logo">
+                    <span class="web"> Web</span> Studio</a>
+                <ul class="menu-nav list">
+                    <li class="item">
+                        <a href="./index.html" class="nav-link current">Студия</a>
+                    </li>
+                    <li class="item">
+                        <a href="./portfolio.html" class="nav-link">Портфолио</a>
+                    </li>
+                    <li class="item">
+                        <a href="./contacts.html" class="nav-link">Контакты </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- имейл и телефон -->
+            <ul class="contact-us list">
+                <li class="item">
+                    <a href="mailto:info@devstudio.com" class="email contact-link">
+                        <svg class="icon-envelope">
+                            <use href="./images/sprite.svg#envelope"></use>
+                        </svg>
+                        info@devstudio.com</a>
+                </li>
+                <li class="item">
+                    <a href="tel:+380961111111" class="contact-link">
+                        <svg class="icon-smartphone">
+                            <use href="./images/sprite.svg#phone"></use>
+                        </svg>
+                        +38 096 111 11 11</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!--MAIN КОНТЕНТ-->
+
+    <main>
+
+        
+    </main>
+<!--Футер-->
+
+<footer class="footer">
+    <div class="container footer-menu">
+
+        <!-- logo-address-in-footer -->
+
+        <div class="logo-address">
+            <a href="./index.html" class="footer-logo">
+                <span class="web"> Web </span> Studio</a>
+            <address>
+                <p class="contacts-address">г. Киев, пр-т Леси Украинки, 26</p>
+
+                <ul class="padding-zero">
+                    <li class="list">
+                        <a href="mailto:info@example.com" class="contacts-item">info@example.com</a>
+                    </li>
+                    <li class="list contacts-margin">
+                        <a href="tel:+380961111111" class="contacts-item">+38 096 111 11 11</a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+        <!-- Соц.сети футтер-->
+        <div class="join-menu">
+            <strong class="join">Присоединяйтесь</strong>
+            <ul class="list social-list-footer">
+                <li class="social-item-footer">
+                    <a class="social-link-footer" href="https://www.instagram.com/" target="_blank">
+                        <svg class="social-icon-footer" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="./images/sprite.svg#instagram" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-item-footer">
+                    <a class="social-link-footer" href="https://www.twitter.com/" target="_blank">
+                        <svg class="social-icon-footer" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="./images/sprite.svg#twitter" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-item-footer">
+                    <a class="social-link-footer" href="https://www.facebook.com/" target="_blank">
+                        <svg class="social-icon-footer" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="./images/sprite.svg#facebook" />
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-item-footer">
+                    <a class="social-link-footer" href="https://www.linkedin.com/" target="_blank">
+                        <svg class="social-icon-footer" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="./images/sprite.svg#linkedin" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- /* sign-up */ Подпишись на рассылку -->
+
+        <div class="sign-up">
+            <b class="join-href">Подпишитесь на рассылку</b>
+            <form class="join-us-form">
+                <div class="form-field-footer">
+                    <input type="email" class="join-email" name="email" placeholder="E-mail" />
+                </div>
+                <button class="btn-footer" type="submit">Подписаться
+                    <svg class="icon-send-form" width="24" height="24">
+                        <use href="./images/sprite.svg#telegramm" />
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</footer>
+
+<!-- /*Modal btn-close*/ Модальная кнопка  -->
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal-close" data-modal-close>
+            <svg class="close" width="18">
+                <use href="./images/sprite.svg#vectorx"></use>
+            </svg></button>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form class="modal-form">
+            <ul class="list">
+                <li class="form-item"><label class="modal-label">
+                        Имя
+                        <input type="text" name="name" class="modal-item">
+                        <svg width="18" height="18" class="modal-icon black-member">
+                            <use href="./images/sprite.svg#member"></use>
+                        </svg>
+                    </label>
+
+                </li>
+                <li class="form-item"><label class="modal-label">
+                        Телефон
+                        <input type="tel" name="phone" class="modal-item">
+                        <svg width="18" height="18" class="modal-icon black-phone">
+                            <use href="./images/sprite.svg#phone-black"></use>
+                        </svg>
+                    </label>
+
+                </li>
+                <li class="form-item"><label class="modal-label">
+                        Почта
+                        <input type="email" name="email" class="modal-item">
+                        <svg width="18" height="18" class="modal-icon black-email">
+                            <use href="./images/sprite.svg#email-black"></use>
+                        </svg>
+                    </label>
+
+                </li>
+            </ul>
+            <!-- Коментарии в модальном-->
+            <label class="modal-label comment-area">
+                Комментарий
+                <textarea name="comment" placeholder="Введите текст" class="modal-item comment"></textarea>
+            </label>
+
+            <div class="checkstyle">
+                <input type="checkbox" class="modal-checkbox" id="happy" name="happy" value="yes">
+                <label for="happy"></label>
+                <span>Соглашаюсь с рассылкой и принимаю<a href="./index.html" class="policy-site">Условия
+                        договора</a></span>
+            </div>
+            <button type="submit" class="form-button">Отправить</button>
+
+        </form>
+    </div>
+</div>
+<script src="./js/modal.js"></script>
+</body>
+
+</html>

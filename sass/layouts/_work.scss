@@ -1,0 +1,24 @@
+/*< !--ЧЕМ МЫ ЗАНИМАЕМСЯ-->*/
+.work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.work-list .item:not(:last-child) {
+    margin-right: 30px;
+}
+.workbox {
+    position: relative;
+    width: 370px;
+    height: 294px;
+}
+.work-title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 70px;
+    align-content: center;
+    justify-content: center;
+    padding: 27px 82px;
+    background: rgba(47, 48, 58, 0.8);
+}

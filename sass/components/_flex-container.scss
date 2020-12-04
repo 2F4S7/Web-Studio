@@ -1,0 +1,96 @@
+/* Flex container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /* margin: -15px; */
+    /* outline-color: rgb(80, 47, 80); */
+    /* background-color: seagreen; */
+}
+.container-element {
+    border-bottom: 1px solid $border-el-port;
+    border-right: 1px solid $border-el-port;
+    border-left: 1px solid $border-el-port;
+    margin-right: 30px;
+    /* width: calc((100% - 60px) / 3); */
+    width: 370px;
+    margin-bottom: 30px;
+    background:$white-color;
+    /* border: 1px solid $white-color; */
+    box-sizing: border-box;
+}
+.container-element:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.container-element:nth-child(3n + 0) {
+    margin-right: 0;
+}
+.margin-bottom {
+    margin-bottom: 0;
+}
+.list-link {
+    /* color: $title-text-color; */
+    text-decoration: none;
+}
+.box1 {
+    display: inline-flex;
+    position: relative;
+    width: 370px;
+    overflow: hidden;
+}
+.link-description {
+    margin: 0;
+    width: 322px;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    text-align: left;
+    justify-content: center;
+    padding: 63px 24px;
+}
+.box-hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    color:$white-color;
+    background-color: rgba(33, 150, 243, 0.9);
+    -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: 250ms;
+    transition-duration: 250ms;
+}
+.list-link:hover .box-hover,
+.list-link:focus .box-hover {
+    opacity: 1;
+    transform: translateY(0);
+}
+.description {
+    padding: 24px 20px;
+    width: 370px;
+}
+.list-description {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}
+.description-port {
+    padding: 24px 20px;
+    width: 370px;
+    border-right: 1px solid $white-color;
+    border-left: 1px solid $white-color;
+    border-bottom: 1px solid $white-color;
+    border-top: none;
+}
+.list-description-port {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $primary-text-color;
+}

@@ -1,0 +1,9 @@
+.section {
+    @extend %padding-sect;
+}
+.section-title-port {
+   @extend %sect-tit-port;
+}
+.section-title {
+    @extend %section-title;
+}

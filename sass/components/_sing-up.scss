@@ -1,0 +1,35 @@
+/* sign-up */
+.sign-up {
+    width: 570px;
+    height: 86px;
+}
+.form-field-footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 448px;
+}
+/* sign-up-form */
+.join-us-form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.join-email {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    background: transparent;
+}
+.join-email::placeholder {
+    background-color: $footer-background-color;
+}
+.icon-send-form {
+    margin-left: 10px;
+    fill: white;
+}
