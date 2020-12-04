@@ -15,9 +15,9 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    @include gbody($white-color, $primary-title-color: #212121;
-, 400, 0)
+    @include gbody($white-color, $primary-title-color);
 }
+
 main {
     display: block;
 }
@@ -197,7 +197,7 @@ template {
     list-style: none;
 }
 .container {
-    @include gcontainer(1200px, 15px, 15px, auto, auto);
+    @include gcontainer(100%, 15px, 15px, auto, auto);
 }
 .title {
     @include gtitle(0, 700, 14px, 1.14, center, 0.03em, uppercase, $white-color);
