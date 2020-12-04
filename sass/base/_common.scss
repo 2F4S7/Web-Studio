@@ -7,10 +7,16 @@ html {
 *::after {
     box-sizing: inherit;
 }
+*:focus {
+    outline-color: $accept-color;
+    outline-offset: 1px;
+    outline-style: solid;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    @include gbody($white-color, $title-text-color, 400, 0)
+    @include gbody($white-color, $primary-title-color: #212121;
+, 400, 0)
 }
 main {
     display: block;
