@@ -1,11 +1,17 @@
 /* Шапка сайта */
 .page-header {
-    display: flex;
-    border: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    background-color: $white-color;
 }
 /* contacts menu in top  */
 .headerbox {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-items: baseline;
+    z-index: 2;
+
+    @media screen and (max-width: 767px) {
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
 }
