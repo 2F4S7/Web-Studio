@@ -1,206 +1,244 @@
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    transition: 600ms linear 0.7s;
+}
+
 .backdrop {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
     top: 0;
     left: 0;
-    z-index: 2;
-    opacity: 1;
-    transition: opacity var(--transition);
+    width: 100%;
+    height: 100%;
+
+    @include for-size(tablet-without) {
+        padding-top: 93px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 94px;
+
+        overflow-y: scroll;
+    }
+
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Modal окно для отзыва!*/
-.backdrop.is-hidden {
-    pointer-events: none;
-    opacity: 0;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0.5);
+.is-hidden .modal {
+    top: 25%;
+    transform: translate(-150%, -100%) scale(0.1);
 }
 
 .modal {
     position: absolute;
-    max-width: 528px;
-    min-height: 581px;
-    padding: 40px;
-    background-color: $white-color;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    top: 50%;
     left: 50%;
-    width: 100%;
+    top: 50%;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--transition);
-}
 
-.modal .close {
-    width: 11px;
-    height: 11px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    background-color: $white-color;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.modal .close:hover,
-.modal .close:focus {
-    fill: $accent-color;
-}
-
-.modal-title {
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $primary-title-colo;
-    margin-top: 0;
-    margin-bottom: 12px;
-}
-
-.modal-label {
     display: flex;
     flex-direction: column;
-    font-size: 12px;
-    line-height: 1.17;
+    justify-content: space-between;
+
+    @include for-size(mobile-only) {
+        // width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
+        width: 450px;
+        height: 609px;
+    }
+
+    @include for-size(desktop) {
+        width: 528px;
+        height: 581px;
+    }
+
+    padding: 40px 40px;
+
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transition: transform 300ms linear,
+    scale 500ms linear;
+    overflow: hidden;
+}
+
+.modal__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    font-weight: $medium-font-weight;
+    font-size: 2rem;
+
+    line-height: calc(30 / 20);
+
+    @include for-size(desktop) {
+        line-height: calc(23 / 20);
+    }
+
+    text-align: center;
+
+    color: $secondary-text-color;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__form-field {
+    position: relative;
+    display: block;
+}
+
+.modal__form-field+.modal__form-field {
+    margin-top: 10px;
+}
+
+.modal__form-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 1.2rem;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    color: #757575;
+}
+
+.modal__form-input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition-property: outline-color, fill;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &::placeholder {
+        color: #ffffff;
+    }
+
+    &:not(:placeholder-shown):focus:valid {
+        outline-color: $accent-color;
+        fill: $accent-color;
+    }
+
+    &:not(:placeholder-shown):focus:valid~.modal__form-icon {
+        outline-color: $accent-color;
+        fill: $accent-color;
+    }
+
+    &:not(:placeholder-shown):focus:invalid {
+        outline-color: #ff0000;
+        fill: #ff0000;
+    }
+
+    &:not(:placeholder-shown):focus:invalid~.modal__form-icon {
+        outline-color: #ff0000;
+        fill: #ff0000;
+    }
+
+    &:focus,
+    &:focus+.modal__form-icon {
+        outline-color: $accent-color;
+        fill: $accent-color;
+    }
+
+    &.modal__form-textarea::placeholder {
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal__form-textarea {
+    display: block;
+
+    height: 120px;
+
+    padding: 12px 16px;
+
+    resize: none;
+    font-size: 1.4rem;
+    line-height: calc(16 / 14);
     letter-spacing: 0.01em;
 }
 
-.comment-area {
-    margin-bottom: 20px;
+// .modal__form-input
+.modal__form-checkbox {
+    margin-top: 20px;
+
+    @include for-size(mobile-only) {
+        text-align: center;
+    }
+
+    @include for-size(mobile) {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    @include for-size(desktop-without) {
+        font-size: 1.2rem;
+        line-height: calc(14 / 12);
+    }
 }
 
-.modal-item {
-    margin-top: 4px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-    padding-left: 42px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal .comment {
-    resize: none;
-    margin-top: 4px;
-    height: 120px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    box-sizing: border-box;
-    border-radius: 4px;
-
-    padding: 12px 16px;
-}
-
-.modal .comment::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-}
-
-.form-item {
-    position: relative;
-    margin-bottom: 10px;
-}
-
-.black-phone {
-    padding: 2px;
-}
-
-.black-email {
-    padding: 1px;
-}
-
-.black-member {
-    padding: 3px;
-}
-
-.modal-icon.black-phone,
-.modal-icon.black-email,
-.modal-icon.black-member {
-    position: absolute;
-    top: 50%;
-    left: 15px;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-item:hover,
-.modal-item:focus {
-    border: 1px solid $accent-color;
-    outline: 0;
-}
-
-.modal-item:hover+.modal-icon,
-.modal-item:focus+.modal-icon {
-    fill: $accent-color;
-}
-
-/** Checkbox Кнопка отправки + соглашения*/
-.checkbox {
-    display: none;
-}
-
-/*top Modal-checkbox*/
-.modal-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-.modal-checkbox+label {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-}
-
-.modal-checkbox+label::before {
-    content: '';
+.modal__checkbox-icon {
     display: inline-block;
+
     width: 16px;
     height: 15px;
-    flex-shrink: 0;
-    flex-grow: 0;
-    border: 2px solid black;
+
+    border: 2px solid $secondary-text-color;
     border-radius: 2px;
-    margin-right: 0.5em;
-    background-repeat: no-repeat;
-    background-position: center;
+
+    transition-property: background-color, border-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
 }
 
-.modal-checkbox:checked+label::before {
-    border-color: $accent-color;
+.modal__form-checkbox-input:checked+.modal__checkbox-icon {
+    background-origin: border-box;
+    background-image: url(../images/svg/icon-check.svg);
+    background-size: contain;
     background-color: $accent-color;
-    background-image: url(../images/SVG/checkbox.svg);
-    cursor: pointer;
-}
-
-/* стили при наведении курсора на checkbox */
-.modal-checkbox:not(:disabled):not(:checked)+label:hover::before {
     border-color: $accent-color;
+    border-radius: 2px;
 }
 
-.policy-site {
-    margin-left: 0.5em;
+.modal__form-checkbox-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $primary-text-color;
+}
+
+.modal__form-checkbox-link {
+    display: block;
+
     color: $accent-color;
-    text-decoration: none;
+
+    text-decoration-line: underline;
 }
 
-.checkstyle {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    margin-left: 13px;
-    font-size: 14px;
-    line-height: 1.17;
+.modal__form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
 }

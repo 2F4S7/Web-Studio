@@ -1,132 +1,191 @@
-/*hero button Кнопка Героя*/
-.btn {
-    padding: 10px 29px;
-    border-color: transparent;
-    border-radius: 4px;
+.button {
     font-family: inherit;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    height: 50px;
-    min-width: 200px;
-    color:$white-color;
-    background-color: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    outline: none;
+}
 
-    &:hover,
-    &:focus {
-        color: $primary-title-color;
-        background-color: $accent-color;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        transition: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 250ms;
+.menu__button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    @include for-size(tablet-without) {
+        width: 40px;
+        height: 40px;
     }
 
-    &:active {
-        color: $primary-title-color;
-        background-color: $icon-color;
+    @include for-size(tablet) {
+        display: none;
+    }
+
+    &.is-open .menu__icon-close {
+        display: block;
+    }
+
+    &.is-open .menu__icon-open {
+        display: none;
     }
 }
 
-/* button for portfolio and contacts */
-.button-container {
+.menu__icon-close {
+    display: none;
+}
+
+.menu__button-image {
+    width: 24px;
+    height: 16px;
+
+    fill: $secondary-text-color;
+
+    transition-property: fill;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    @include for-size(tablet) {
+        display: none;
+    }
+
+    &:hover,
+    :focus {
+        fill: $accent-color;
+        cursor: pointer;
+    }
+}
+
+.banner__button {
+    min-width: 200px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+
+    border: none;
+    border-radius: 4px;
+
+    background-color: $accent-color;
+
+    color: $primary-color;
+
+    font-weight: $bold-font-weight;
+    font-size: 1.6rem;
+    /* 1.87 */
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: $accent-secondary-color;
+    }
+}
+
+.modal__form-button {
+    @extend .banner__button;
+}
+
+.subscription__button {
+    @extend .banner__button;
+}
+
+.subscription__button {
+    position: relative;
+
+    padding-left: 29px;
+
+    text-align: start;
+    transition-property: background-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
+    &::after {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        display: block;
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(../images/svg/icon-send.svg);
+    }
+}
+
+.button-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    align-items: center;
 
-    &.item {
-        /* display: list-item; */
-        text-align: center;
-        display: inline-block;
-    }
-}
+    width: 30px;
+    height: 30px;
 
-.btn-portfolio {
-    margin-right: 8px;
-    min-width: 73px;
-    height: 38px;
-    padding: 6px 22px;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: $primary-title-color;
-    background: $background-item;
-    border: 1px solid transparent;
-    transition: all cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 250ms;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    background-color: $primary-color;
+
+    transition-property: fill;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+
     cursor: pointer;
-    outline: none;
 
-    &:hover,
-    &:focus {
-        background: $accent-color;
-        color:$white-color;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    &:hover {
+        fill: $accent-color;
     }
 }
 
-/* btn-footer all site */
-.btn-footer {
-    display: flex;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color:$white-color;
-    background-color: $accent-color;
-    border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 29px;
-    padding-right: 28px;
-    margin-left: 12px;
-
-    &:hover,
-    &:focus {
-        color: $primary-title-color;
-        background-color: $accent-color;
-        transition: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 250ms;
-    }
+.button-close__svg {
+    width: 11px;
+    height: 11px;
 }
 
-/*Кнопка отправки в модал окне*/
-.modal .form-button {
-    display: flex;
-    align-items: center;
+.modal__form-button {
+    margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px 55px;
-    background-color: $accent-color;
-    border: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 16px;
-    color: $white-color;
-    letter-spacing: 0.06em;
-    line-height: 1.87;
 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    transition-property: background-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
+}
+
+.filter__btn {
+    padding: 6px 22px;
+    border: transparent;
+    border-radius: 4px;
+
+    background-color: $secondary-color;
+
+    color: $secondary-text-color;
+
+    font-weight: $medium-font-weight;
+    font-size: 1.6rem;
+    /*  1.62  */
+    line-height: calc(26 / 16);
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: $duration;
+    transition-timing-function: $timing-function;
 
     &:hover,
-    &:focus {
-        color: $primary-title-color;
+    &:focus,
+    &:active {
+        outline-color: transparent;
+        outline-width: 0;
+
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+
         background-color: $accent-color;
-        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-        transition: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 250ms;
+
+        color: $primary-color;
     }
 }
