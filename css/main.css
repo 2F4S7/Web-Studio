@@ -551,7 +551,7 @@ html {
   content: "";
   width: 24px;
   height: 24px;
-  background-image: url(../images/svg/icon-send.svg);
+  background-image: url(../images/svg/icon-send-w.svg);
 }
 
 .button-close {
@@ -1041,18 +1041,22 @@ html {
 
 .feature__icon-antenna::before {
   background-image: url(../images/svg/antenna.svg);
+  background-size: 70px;
 }
 
 .feature__icon-clock::before {
   background-image: url(../images/svg/clock.svg);
+  background-size: 70px;
 }
 
 .feature__icon-diagram::before {
   background-image: url(../images/svg/diagram.svg);
+  background-size: 70px;
 }
 
 .feature__icon-astronaut::before {
   background-image: url(../images/svg/astronaut.svg);
+  background-size: 70px;
 }
 
 .feature__text {
@@ -1617,19 +1621,23 @@ html {
 }
 
 .social__instagram-link {
-  background-image: url(../images/svg/instagram.svg);
+  background-image: url(../images/svg/instagram-w.svg);
+  background-size: 20px;
 }
 
 .social__twitter-link {
-  background-image: url(../images/svg/twitter.svg);
+  background-image: url(../images/svg/twitter-w.svg);
+  background-size: 20px;
 }
 
 .social__facebook-link {
-  background-image: url(../images/svg/facebook.svg);
+  background-image: url(../images/svg/facebook-w.svg);
+  background-size: 20px;
 }
 
 .social__linkedin-link {
-  background-image: url(../images/svg/linkedin.svg);
+  background-image: url(../images/svg/linkedin-w.svg);
+  background-size: 20px;
 }
 
 .filter {
