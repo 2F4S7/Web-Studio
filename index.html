@@ -51,8 +51,7 @@
 					</li>
 				</ul>
 			</div>
-			<button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-mobile"
-				data-menu-button>
+			<button class="menu__button" type="button" aria-expanded="false" aria-controls="menu-mobile" data-menu-button>
 				<svg class="menu__button-image" aria-label="Переключатель мобильного меню">
 					<use class="menu__icon-close" href="./images/icon-sprite.svg#btn-close"></use>
 					<use class="menu__icon-open" href="./images/icon-sprite.svg#menu"></use>
@@ -60,9 +59,9 @@
 			</button>
 		</div>
 	</header>
-
+	
 	<main>
-		<!-- Шапка -->
+		<!-- Шапка mobile and table-->
 		<section class="banner">
 			<div class="container">
 				<h1 class="banner__title">Эффективные решения для вашего бизнеса</h1>
@@ -110,7 +109,7 @@
 				</ul>
 			</div>
 		</section>
-
+	
 		<!-- Чем мы занимаемся -->
 
 		<section class="section">
@@ -124,8 +123,8 @@
                     ./images/practice/desktop-app@2x.webp 2x
                   " type="image/webp" />
 							<source srcset="./images/practice/desktop-app@2x.jpg 2x" />
-							<img class="practice__image" src="./images/practice/desktop-app.jpg"
-								alt="Написание кода программы" width="370" />
+							<img class="practice__image" src="./images/practice/desktop-app.jpg" alt="Написание кода программы"
+								width="370" />
 						</picture>
 						<div class="practice__box-inside">
 							<p class="practice__text">Десктопные приложения</p>
@@ -192,10 +191,9 @@
                     ./images/team/tablet/product-desinger.jpg,
                     ./images/team/tablet/product-desinger@2x.jpg 2x
                   " media="(max-width: 1199px)" />
-							<source srcset="./images/team/desktop/product-desinger@2x.jpg 2x"
-								media="(min-width: 1200px)" />
-							<img class="team__image" src="./images/team/desktop/product-desinger.jpg"
-								alt="Дизайнер продукта" width="270" />
+							<source srcset="./images/team/desktop/product-desinger@2x.jpg 2x" media="(min-width: 1200px)" />
+							<img class="team__image" src="./images/team/desktop/product-desinger.jpg" alt="Дизайнер продукта"
+								width="270" />
 						</picture>
 						<div class="team__text">
 							<h3 class="team__title">Игорь Демьяненко</h3>
@@ -256,8 +254,7 @@
                     ./images/team/tablet/frontend-developer.jpg,
                     ./images/team/tablet/frontend-developer@2x.jpg 2x
                   " media="(max-width: 1199px)" />
-							<source srcset="./images/team/desktop/frontend-developer@2x.jpg 2x"
-								media="(min-width: 1200px)" />
+							<source srcset="./images/team/desktop/frontend-developer@2x.jpg 2x" media="(min-width: 1200px)" />
 							<img class="team__image" src="./images/team/desktop/frontend-developer.jpg"
 								alt="Фронтенд разработчик" width="270" />
 						</picture>
@@ -321,8 +318,7 @@
                     ./images/team/tablet/marketing@2x.jpg 2x
                   " media="(max-width: 1199px)" />
 							<source srcset="./images/team/desktop/marketing@2x.jpg 2x" media="(min-width: 1200px)" />
-							<img class="team__image" src="./images/team/desktop/marketing.jpg" alt="Маркетолог"
-								width="270" />
+							<img class="team__image" src="./images/team/desktop/marketing.jpg" alt="Маркетолог" width="270" />
 						</picture>
 						<div class="team__text">
 							<h3 class="team__title">Николай Тарасов</h3>
@@ -566,8 +562,8 @@
 
 				<label class="modal__form-field">
 					<span class="modal__form-label">Телефон</span>
-					<input type="tel" class="modal__form-input" name="user-phone" pattern="[0-9]{10,12}"
-						autocomplete="off" placeholder="Телефон" required />
+					<input type="tel" class="modal__form-input" name="user-phone" pattern="[0-9]{10,12}" autocomplete="off"
+						placeholder="Телефон" required />
 					<svg class="modal__form-icon">
 						<use href="./images/icon-sprite.svg#phone-black-18dp"></use>
 					</svg>
@@ -576,8 +572,7 @@
 				<label class="modal__form-field">
 					<span class="modal__form-label">Почта</span>
 					<input type="email" class="modal__form-input" name="user-mail"
-						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" placeholder="Почта"
-						required />
+						pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off" placeholder="Почта" required />
 					<svg class="modal__form-icon">
 						<use href="./images/icon-sprite.svg#email-black-18dp"></use>
 					</svg>
@@ -590,8 +585,7 @@
 				</label>
 
 				<label class="modal__form-checkbox">
-					<input type="checkbox" class="modal__form-checkbox-input visually-hidden" name="checkbox"
-						required />
+					<input type="checkbox" class="modal__form-checkbox-input visually-hidden" name="checkbox" required />
 					<span class="modal__checkbox-icon"></span>
 					<span class="modal__form-checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
 					<a class="modal__form-checkbox-link link" href="#">Условия договора</a>
